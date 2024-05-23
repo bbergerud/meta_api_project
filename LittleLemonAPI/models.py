@@ -1,6 +1,9 @@
+import decimal
+
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator
 from django.db import models
+from django.utils.timezone import now
 
 
 # NOTE: Use to join fixtures by title rather than pk
@@ -58,9 +61,9 @@ class Order(models.Model):
     total = models.DecimalField(
         max_digits=6,
         decimal_places=2,
-        validators=[MinValueValidator(0.0)],
+        validators=[MinValueValidator(decimal.Decimal("0.00"))],
     )
-    date = models.DateField(db_index=True)
+    date = models.DateField(db_index=True, default=now)
 
 
 class OrderItem(models.Model):
@@ -70,12 +73,12 @@ class OrderItem(models.Model):
     unit_price = models.DecimalField(
         max_digits=6,
         decimal_places=2,
-        validators=[MinValueValidator(0.0)],
+        validators=[MinValueValidator(decimal.Decimal("0.00"))],
     )
     price = models.DecimalField(
         max_digits=6,
         decimal_places=2,
-        validators=[MinValueValidator(0.0)],
+        validators=[MinValueValidator(decimal.Decimal("0.00"))],
     )
 
     class Meta:
