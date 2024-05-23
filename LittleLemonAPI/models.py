@@ -69,6 +69,7 @@ class Order(models.Model):
         on_delete=models.SET_NULL,
         related_name="delivery_crew",
         null=True,
+        default=None,
     )
     status = models.BooleanField(db_index=True, default=0)
     total = models.DecimalField(
