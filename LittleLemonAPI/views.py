@@ -1,5 +1,3 @@
-import datetime as dt
-
 from django.contrib.auth.models import Group, User
 from django.shortcuts import get_object_or_404
 from rest_framework import generics, status, viewsets
