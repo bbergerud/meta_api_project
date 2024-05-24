@@ -1,4 +1,5 @@
 django
 djangorestframework
 django-filter
+djoser
 bleach
