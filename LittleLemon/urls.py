@@ -24,6 +24,6 @@ router = DefaultRouter(trailing_slash=False)
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("LittleLemonAPI.urls")),
-    path("api/", include("djoser.urls")),
-    path("", include("djoser.urls.authtoken")),
+    path("auth/", include("djoser.urls")),
+    path("auth/", include("djoser.urls.authtoken")),
 ]

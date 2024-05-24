@@ -166,19 +166,29 @@ class RubricTest(APITestCase):
 
     def test_05(self):
         """Managers can login"""
+        # NOTE: The grading rubric only expects the manager to be able to access /auth/token/login/
+        # There is currently some issue where the user has to be created in the same function call
+        # for this api to work in testing (see test_12) that needs debugging
+        url = "/auth/token/login/"
         user = User.objects.filter(groups__name="Manager").first()
-        token = Token.objects.get(user=user)
+        response = self.client.post(
+            url, {"username": user.username, "password": user.password}
+        )
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED, response.data)
+
+        # user = User.objects.filter(groups__name="Manager").first()
+        # token = Token.objects.get(user=user)
 
         # self.client.credentials(HTTP_AUTHORIZATION=f"Token {token.key}")
         # self.client.force_login(user)
-        self.assertTrue(
-            self.client.login(user=user),
-            {
-                "username": user.username,
-                "password": user.password,
-                "is_staff": user.is_staff,
-            },
-        )
+        # self.assertTrue(
+        #     self.client.login(user=user),
+        #     {
+        #         "username": user.username,
+        #         "password": user.password,
+        #         "is_staff": user.is_staff,
+        #     },
+        # )
 
     def test_06(self):
         """Managers can update the item of the day"""
@@ -257,7 +267,8 @@ class RubricTest(APITestCase):
 
     def test_11(self):
         # 11 - create user
-        url = "/api/users/"
+        # should be /auth/users
+        url = "/auth/users/"
         data = dict(username="guest", password="123ABCxyz!")
         response = self.client.post(url, data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -265,14 +276,14 @@ class RubricTest(APITestCase):
 
     def test_12(self):
         """generate token using username and password"""
-
+        # add auth/
         # TODO: Figure out why this is needed for the second half to work
-        url = "/api/users/"
+        url = "/auth/users/"
         credentials = dict(username="guest", password="123ABCxyz!")
         response = self.client.post(url, credentials)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-        url = "/token/login"
+        url = "/auth/token/login"
         response = self.client.post(url, credentials)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
