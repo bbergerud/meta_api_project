@@ -58,7 +58,7 @@ class RubricTest(APITestCase):
             ),
             dict(
                 user=bo_peep,
-                total=35,
+                total=45,
                 date=dt.date.today(),
                 delivery_crew=rex,
             ),
@@ -291,40 +291,38 @@ class RubricTest(APITestCase):
         """browse categories"""
         url = reverse("categories")
         response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK, msg="Test 13")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_14(self):
         """browse menu items"""
         url = "/api/menu-items"
         response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK, msg="Test 14")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_15(self):
         """filter menu items by category"""
         url = "/api/menu-items?category=main"
         response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK, msg="Test 15: SC")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
         for data in response.data["results"]:
-            self.assertEqual(
-                data["category"]["title"].lower(), "main", msg="Test 15: category"
-            )
+            self.assertEqual(data["category"]["title"].lower(), "main")
 
     def test_16(self):
         """paginate (assuming page size = 4)"""
         url = "/api/menu-items?page=2"
         response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK, msg="Test 16: SC")
-        self.assertEqual(response.data["results"][0]["id"], 5, msg="Test 16: page")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["results"][0]["id"], 5)
 
     def test_17(self):
         """sort menu items by price"""
         url = "/api/menu-items?ordering=price"
         response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK, msg="Test 17: SC")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
 
         data = response.data["results"]
         for i, j in zip(data[:-1], data[1:]):
-            self.assertLessEqual(i["price"], j["price"], msg="Test 17: sorted price")
+            self.assertLessEqual(i["price"], j["price"])
 
     def test_18(self):
         """add menu items to cart"""
