@@ -1,6 +1,6 @@
 # Little Lemon APIs
 
-This repository represents the final project as part of the API course in Meta's Back-End Developer Certificate. It uses Django to interact with a sqlite database.
+This repository represents the final project as part of the [API](https://www.coursera.org/learn/apis) course in [Meta's Back-End Developer Professional Certificate](https://www.coursera.org/professional-certificates/meta-back-end-developer). It uses Django to interact with a sqlite database.
 
 
 ## Populating database
