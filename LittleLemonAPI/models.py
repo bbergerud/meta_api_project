@@ -35,6 +35,9 @@ class MenuItem(models.Model):
     class Meta:
         unique_together = ("title", "category")
 
+    def __str__(self) -> str:
+        return self.title
+
 
 class Cart(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -61,6 +64,9 @@ class Cart(models.Model):
         self.price = self.get_price()
         super().save(*args, **kwargs)
 
+    def __str__(self):
+        return self.user.username
+
 
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -78,6 +84,9 @@ class Order(models.Model):
         validators=[MinValueValidator(decimal.Decimal("0.00"))],
     )
     date = models.DateField(db_index=True, default=now)
+
+    def __str__(self) -> str:
+        return f"{self.user} | {self.date} | {self.total}"
 
 
 class OrderItem(models.Model):
@@ -104,3 +113,6 @@ class OrderItem(models.Model):
     def save(self, *args, **kwargs):
         self.price = self.get_price()
         super().save(*args, **kwargs)
+
+    def __str__(self) -> str:
+        return f"Order {self.order.id} | {self.menuitem.title}"
