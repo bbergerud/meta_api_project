@@ -8,16 +8,13 @@ from rest_framework.test import APITestCase
 
 from . import models
 
-# These aren't being used
 MANAGER = dict(username="Woody", password="tomhanks")
 CUSTOMER = dict(username="Buzz", password="timallen")
 
 
-# Create your tests here.
 class RubricTest(APITestCase):
     def setUp(self):
 
-        # Make manager staff
         group_manager = Group.objects.create(name="Manager")
         group_crew = Group.objects.create(name="Delivery Crew")
 
@@ -266,8 +263,7 @@ class RubricTest(APITestCase):
         self.assertTrue(order.status)
 
     def test_11(self):
-        # 11 - create user
-        # should be /auth/users
+        """create user"""
         url = "/auth/users/"
         data = dict(username="guest", password="123ABCxyz!")
         response = self.client.post(url, data)
@@ -276,7 +272,6 @@ class RubricTest(APITestCase):
 
     def test_12(self):
         """generate token using username and password"""
-        # add auth/
         # TODO: Figure out why this is needed for the second half to work
         url = "/auth/users/"
         credentials = dict(username="guest", password="123ABCxyz!")
