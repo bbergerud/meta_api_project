@@ -1,0 +1,110 @@
+[
+    {
+        "model": "LittleLemonAPI.menuitem",
+        "pk": 1,
+        "fields": {
+            "title": "Beef Pasta",
+            "price": 6.00,
+            "featured": false,
+            "category": [
+                "Main"
+            ]
+        }
+    },
+    {
+        "model": "LittleLemonAPI.menuitem",
+        "pk": 2,
+        "fields": {
+            "title": "Tomato Pasta",
+            "price": 4.00,
+            "featured": false,
+            "category": [
+                "Main"
+            ]
+        }
+    },
+    {
+        "model": "LittleLemonAPI.menuitem",
+        "pk": 3,
+        "fields": {
+            "title": "Lemon Dessert",
+            "price": 4.50,
+            "featured": false,
+            "category": [
+                "Desserts"
+            ]
+        }
+    },
+    {
+        "model": "LittleLemonAPI.menuitem",
+        "pk": 4,
+        "fields": {
+            "title": "Grilled Fish",
+            "price": 5.50,
+            "featured": false,
+            "category": [
+                "Appetizers"
+            ]
+        }
+    },
+    {
+        "model": "LittleLemonAPI.menuitem",
+        "pk": 5,
+        "fields": {
+            "title": "Greek Salad",
+            "price": 7.50,
+            "featured": false,
+            "category": [
+                "Appetizers"
+            ]
+        }
+    },
+    {
+        "model": "LittleLemonAPI.menuitem",
+        "pk": 6,
+        "fields": {
+            "title": "Cheese Sticks",
+            "price": 5.50,
+            "featured": false,
+            "category": [
+                "Appetizers"
+            ]
+        }
+    },
+    {
+        "model": "LittleLemonAPI.menuitem",
+        "pk": 7,
+        "fields": {
+            "title": "Bruschetta",
+            "price": 9.00,
+            "featured": false,
+            "category": [
+                "Main"
+            ]
+        }
+    },
+    {
+        "model": "LittleLemonAPI.menuitem",
+        "pk": 8,
+        "fields": {
+            "title": "Tiramisu",
+            "price": 6.00,
+            "featured": false,
+            "category": [
+                "Desserts"
+            ]
+        }
+    },
+    {
+        "model": "LittleLemonAPI.menuitem",
+        "pk": 9,
+        "fields": {
+            "title": "Strawberry Cheesecake",
+            "price": 6.50,
+            "featured": false,
+            "category": [
+                "Desserts"
+            ]
+        }
+    }
+]

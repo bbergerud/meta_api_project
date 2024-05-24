@@ -1,0 +1,78 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "buzz",
+            "password": "timallen"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "username": "woody",
+            "password": "tomhanks",
+            "groups": [
+                [
+                    "Manager"
+                ]
+            ]
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "username": "bo_peep",
+            "password": "anniepotts"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "username": "hamm",
+            "password": "johnratzenberger",
+            "groups": [
+                [
+                    "Delivery Crew"
+                ]
+            ]
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "username": "mr_potato_head",
+            "password": "donrickles",
+            "groups": [
+                [
+                    "Delivery Crew"
+                ]
+            ]
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "username": "rex",
+            "password": "wallaceshawn",
+            "groups": [
+                [
+                    "Delivery Crew"
+                ]
+            ]
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 8,
+        "fields": {
+            "username": "slinky_dog",
+            "password": "jimvarney"
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "model": "LittleLemonAPI.category",
+        "pk": 1,
+        "fields": {
+            "slug": "main",
+            "title": "Main"
+        }
+    },
+    {
+        "model": "LittleLemonAPI.category",
+        "pk": 2,
+        "fields": {
+            "slug": "desserts",
+            "title": "Desserts"
+        }
+    },
+    {
+        "model": "LittleLemonAPI.category",
+        "pk": 3,
+        "fields": {
+            "slug": "appetizers",
+            "title": "Appetizers"
+        }
+    }
+]

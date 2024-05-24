@@ -1,0 +1,14 @@
+[
+    {
+        "model": "auth.group",
+        "fields": {
+            "name": "Manager"
+        }
+    },
+    {
+        "model": "auth.groups",
+        "fields": {
+            "name": "Delivery Crew"
+        }
+    }
+]

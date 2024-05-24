@@ -1,0 +1,62 @@
+[
+    {
+        "model": "LittleLemonAPI.order",
+        "pk": 1,
+        "fields": {
+            "user": [
+                "bo_peep"
+            ],
+            "delivery_crew": [
+                "rex"
+            ],
+            "status": true,
+            "total": 21.00,
+            "date": "2024-01-01"
+        }
+    },
+    {
+        "model": "LittleLemonAPI.order",
+        "pk": 2,
+        "fields": {
+            "user": [
+                "buzz"
+            ],
+            "delivery_crew": [
+                "hamm"
+            ],
+            "status": true,
+            "total": 45.00,
+            "date": "2024-01-02"
+        }
+    },
+    {
+        "model": "LittleLemonAPI.order",
+        "pk": 3,
+        "fields": {
+            "user": [
+                "slinky_dog"
+            ],
+            "delivery_crew": [
+                "mr_potato_head"
+            ],
+            "status": false,
+            "total": 11.50,
+            "date": "2024-01-03"
+        }
+    },
+    {
+        "model": "LittleLemonAPI.order",
+        "pk": 4,
+        "fields": {
+            "user": [
+                "slinky_dog"
+            ],
+            "delivery_crew": [
+                "rex"
+            ],
+            "status": true,
+            "total": 9.00,
+            "date": "2024-01-03"
+        }
+    }
+]

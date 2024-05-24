@@ -1,0 +1,68 @@
+[
+    {
+        "model": "LittleLemonAPI.orderitem",
+        "pk": 1,
+        "fields": {
+            "order": 1,
+            "menuitem": 1,
+            "quantity": 2,
+            "unit_price": 6.00,
+            "price": 12.00
+        }
+    },
+    {
+        "model": "LittleLemonAPI.orderitem",
+        "pk": 2,
+        "fields": {
+            "order": 1,
+            "menuitem": 3,
+            "quantity": 2,
+            "unit_price": 4.50,
+            "price": 9.00
+        }
+    },
+    {
+        "model": "LittleLemonAPI.orderitem",
+        "pk": 3,
+        "fields": {
+            "order": 2,
+            "menuitem": 7,
+            "quantity": 5,
+            "unit_price": 9.00,
+            "price": 45.00
+        }
+    },
+    {
+        "model": "LittleLemonAPI.orderitem",
+        "pk": 4,
+        "fields": {
+            "order": 3,
+            "menuitem": 2,
+            "quantity": 1,
+            "unit_price": 4.00,
+            "price": 4.00
+        }
+    },
+    {
+        "model": "LittleLemonAPI.orderitem",
+        "pk": 5,
+        "fields": {
+            "order": 3,
+            "menuitem": 5,
+            "quantity": 1,
+            "unit_price": 7.50,
+            "price": 7.50
+        }
+    },
+    {
+        "model": "LittleLemonAPI.orderitem",
+        "pk": 6,
+        "fields": {
+            "order": 4,
+            "menuitem": 7,
+            "quantity": 1,
+            "unit_price": 9.00,
+            "price": 9.00
+        }
+    }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "model": "LittleLemonAPI.cart",
+        "pk": 1,
+        "fields": {
+            "user": [
+                "slinky_dog"
+            ],
+            "menuitem": 4,
+            "quantity": 2,
+            "unit_price": 5.50,
+            "price": 11.00
+        }
+    }
+]
